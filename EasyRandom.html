@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html><head title="Doc"><meta charset="UTF-8"/><link href="styles.css" rel="stylesheet"/></head><body><nav class="sidebar"><h3>Modules</h3><ul><li><li><a href="EasyRandom.html">EasyRandom</a></li></li></ul><h3>Declarations</h3><ul><li><li><a href="#nextNat">nextNat</a></li></li></ul></nav><div class="documentation"><h1>EasyRandom</h1><p>EasyRandom library</p>
+<p>Simple usage:</p>
+<pre class="motoko"><code class="motoko">import EasyRandom &quot;mo:easy-random/EasyRandom&quot;;
+
+
+let entropy = await Random.blob(); 
+let finite = Random.Finite(entropy);
+let randomFromZeroToNine : ?Nat = EasyRandom.nextNat(finite, 10);</code></pre><div class="declaration"><h4 class="function" id="nextNat"><code><span class="keyword">public func </span><span class="fnname">nextNat</span>(<span class="parameter">finite</span> : <span class="type">Random.Finite</span>, <span class="parameter">max</span> : <span class="type">Nat</span>) : ?<span class="type">Nat</span></code></h4><p><p>Generate a random number between 0 and [max] - 1, using the provided [finite].</p>
+<p>As other Random methods, null is returned if [finite] doesn't contain enought entropy.</p>
+</p></div></div></body></html>
